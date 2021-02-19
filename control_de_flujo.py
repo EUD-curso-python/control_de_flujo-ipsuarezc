@@ -2,8 +2,13 @@
 """Guarde en lista `naturales` los primeros 100 números naturales (desde el 1) 
 usando el bucle while
 """
+i = 1
+naturales = []
 
-
+while i <= 100:
+    naturales.append(i)
+    i += 1
+#print(naturales)
 
 
 """Guarde en `acumulado` una lista con el siguiente patrón:
@@ -12,16 +17,18 @@ usando el bucle while
 
 Hasta el número 50.
 """
+#acumulado = []
 
-
+#for
 
 
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
-
-
-
-
+i = 0
+suma100 = 0
+for i in naturales:
+    suma100 += i
+print(suma100)
 
 
 """Guarde en `tabla100` un string con los primeros 10 múltiplos del número 134, 
@@ -31,7 +38,18 @@ separados por coma, así:
 
 """
 
+'''i = 1
+tabla100 = []
 
+while i <= 10:
+    naturales.append(i)
+    if i % 134 == 0: 
+        i += 1
+naturales.append(i)
+    #i += 1
+print(tabla100)
+
+'''
 
 
 
@@ -41,7 +59,11 @@ está ordenada).
 """
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
-
+multiplos3 = 0
+for i in lista1:
+    if i % 3 == 0 and i <= 300:
+        multiplos3 += 1
+print(multiplos3)
 
 
 
@@ -59,7 +81,8 @@ lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 
   '1'
 ]
 """
-
+#for i in range(1,50):
+    #print i
 
 
 
