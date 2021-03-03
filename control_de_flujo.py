@@ -42,20 +42,18 @@ separados por coma, así:
 '134,268,...'
 
 """
-''''
-n = 0
-i = 1
-tabla100 = []
-while n<10:
-    for i in tabla100:
-        if i % 134 == 0:
-            tabla100.append(i) 
-            i += 1
-    print(tabla100)
 
-'''
-
-
+n=1
+i=1
+tabla100=''
+valores=list()
+while i <= 10:
+    if n % 134 == 0:
+        i+=1
+        valores.append(str(n))
+    n+=1
+tabla100=','.join(valores)
+#print(tabla100)
 
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
 menores o iguales a 300 en la lista `lista1` que se define a continuación (la lista 
@@ -64,11 +62,12 @@ está ordenada).
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
 multiplos3 = 0
+lista=[]
 for i in lista1:
-    if i % 3 == 0 and i <= 300:
+    if i % 3 == 0 and i < 300:
+        lista.append(i)
         multiplos3 += 1
 #print(multiplos3)
-
 
 
 """Guardar en `regresivo50` una lista con la cuenta regresiva desde el número 
@@ -78,7 +77,7 @@ for i in lista1:
   '50 49 48 47...',
   '49 48 47 46...',
   ...
-  '5 4 3 2 1',
+  '5 4 3 2 1',r
   '4 3 2 1',
   '3 2 1',
   '2 1',
@@ -88,6 +87,42 @@ for i in lista1:
 #for i in range(1,50):
     #print i
 
+regresivo50 = []
+n = 1
+for i in range(50):
+    while n <= i:
+        prueba1 += str(n)
+        n += 1
+
+
+l1=[]
+l2=[]
+acumulado2=list()
+regresivo50=list()
+n=1
+for i in range(51):
+    while n<=i:
+        l1.append(str(n)+'\n')
+        n=n+1
+    l2=' '.join(l1)
+    acumulado2.append(l2)
+    l1=list()
+    n=1
+acumulado2.pop(0)
+regresivo50=acumulado2
+regresivo50.reverse()
+print(regresivo50)
+
+prueba = ""
+for i in range(0,31,1):
+    for j in range(i):
+        prueba+='*'
+    prueba+='\n'
+for i in range(29,0,-1):
+    for j in range(i):
+        prueba+='*'
+    prueba+='\n'
+patron = prueba.lstrip('\n').rstrip('\n')
 
 
 
@@ -120,12 +155,10 @@ del segundo cada uno se calcula sumando los dos anteriores términos de la serie
 """
 i = 2
 fibonacci = [0,1]
-while i < 10:
-    fibonacci.append((i-1)+(i-2))
+while i < 60:
+    fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
     i  += 1
-print (fibonacci)
-
-
+#print (fibonacci)
 
 
 """Guardar en `factorial` el factorial de 30
@@ -139,7 +172,7 @@ Por ejemplo, el factorial de 5 se calcula así:
 factorial = 30
 for i in range(factorial,1,-1):
     factorial =factorial* (i -1)
-print (factorial)
+#print (factorial)
 
 
 """Guarde en lista `pares` los elementos de la siguiente lista que esten 
@@ -155,7 +188,10 @@ for i in lista3:
         pares.append(i)
     posicion += 1
 
-print(pares)
+#print(pares)
+
+
+
 
 
 """Guarde en lista `cubos` el cubo (potencia elevada a la 3) de los números del 
@@ -179,7 +215,7 @@ while n <= 10:
         i+=1
     suma_2s = suma_2s + int(serie)
     n+=1
-print(suma_2s)
+#print(suma_2s)
 
 
 
@@ -204,18 +240,16 @@ cantidad máxima de asteriscos de 30.
 *
 """
 
-n = 1
-i = 1
-patron = []
-simbolo = '*'
-while n <= 30:
-    while i < n:
-        simbolo = simbolo + '*'
-        i+=1
-        #if i > 30:
-         #   i-=1
-    patron.append(simbolo+'\n')
-    n+=1
-print(patron)
 
+prueba = ""
+for i in range(0,31,1):
+    for j in range(i):
+        prueba+='*'
+    prueba+='\n'
+for i in range(29,0,-1):
+    for j in range(i):
+        prueba+='*'
+    prueba+='\n'
+patron = prueba.lstrip('\n').rstrip('\n')
+#print(patron)
 
