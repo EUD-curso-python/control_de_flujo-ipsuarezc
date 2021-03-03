@@ -87,19 +87,22 @@ for i in lista1:
 #for i in range(1,50):
     #print i
 
-l1 = ""
-l2=""
+#l1 = ""
+#l2=""
 regresivo50 = []
-n = 1
-for i in range(51):
-    while n <= i:
-        l1+=str(n)
-        n += 1
-    l1+='\n'
-    l2=reversed(l1)
-    #print(l1)
-    l2= ' '.join(l1)
-regresivo50=l2
+#n = 1
+for i in range(1, 50, -1):
+    regresivo50.append(i)
+
+    #for j in range(i):
+        #regresivo50.append(j)
+        #n += 1
+    #+='\n'
+    print(regresivo50)
+    #l2=reversed(l1)
+
+   # l2= ' '.join(l1)
+#regresivo50=l2
 #print (regresivo50)
 
 
@@ -132,13 +135,10 @@ regresivo50=l2
 lista2 = list(range(1, 70, 5))
 
 invertido=[]
-for i in lista2:
-    print(i)
-    invertido.append(lista2.sort())
-print(invertido)
-
-
-
+for i in sorted(lista2, reverse=True):
+    invertido.append(i)
+#print(invertido)
+    
 
 """Guardar en `primos` una lista con todos los números primos desde el 37 al 300
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
