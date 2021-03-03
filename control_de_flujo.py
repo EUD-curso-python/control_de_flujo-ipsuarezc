@@ -87,42 +87,41 @@ for i in lista1:
 #for i in range(1,50):
     #print i
 
+l1 = ""
+l2=""
 regresivo50 = []
 n = 1
-for i in range(50):
-    while n <= i:
-        prueba1 += str(n)
-        n += 1
-
-
-l1=[]
-l2=[]
-acumulado2=list()
-regresivo50=list()
-n=1
 for i in range(51):
-    while n<=i:
-        l1.append(str(n)+'\n')
-        n=n+1
-    l2=' '.join(l1)
-    acumulado2.append(l2)
-    l1=list()
-    n=1
-acumulado2.pop(0)
-regresivo50=acumulado2
-regresivo50.reverse()
-print(regresivo50)
+    while n <= i:
+        l1+=str(n)
+        n += 1
+    l1+='\n'
+    l2=reversed(l1)
+    #print(l1)
+    l2= ' '.join(l1)
+regresivo50=l2
+#print (regresivo50)
 
-prueba = ""
-for i in range(0,31,1):
-    for j in range(i):
-        prueba+='*'
-    prueba+='\n'
-for i in range(29,0,-1):
-    for j in range(i):
-        prueba+='*'
-    prueba+='\n'
-patron = prueba.lstrip('\n').rstrip('\n')
+
+#l1=[]
+#l2=[]
+#acumulado2=list()
+#regresivo50=list()
+#n=1
+#for i in range(51):
+#    while n<=i:
+#        l1.append(str(n)+'\n')
+#        n=n+1
+#    l2=' '.join(l1)
+#    acumulado2.append(l2)
+#    l1=list()
+#    n=1
+#acumulado2.pop(0)
+#regresivo50=acumulado2
+#regresivo50.reverse()
+#print(regresivo50)
+
+
 
 
 
@@ -132,6 +131,11 @@ patron = prueba.lstrip('\n').rstrip('\n')
 """
 lista2 = list(range(1, 70, 5))
 
+invertido=[]
+for i in lista2:
+    print(i)
+    invertido.append(lista2.sort())
+print(invertido)
 
 
 
@@ -140,7 +144,19 @@ lista2 = list(range(1, 70, 5))
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
 """
-
+primos = []
+for i in range(37,301):
+    prim = True
+    for j in range(2,11):
+        if i == j:
+           break
+        elif i%j == 0:
+           prim = False
+        else:
+           continue
+    if prim == True:
+        primos.append(i)
+#print(primos)
 
 
 
@@ -198,6 +214,10 @@ for i in lista3:
 1 al 100. 
 """
 
+cubos = []
+for i in range(1,101,1):
+    cubos.append(i ** 3)
+#print(cubos)
 
 
 
