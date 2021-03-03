@@ -113,29 +113,14 @@ Nota: Un número primo es un número entero que no se puede calcular multiplican
 otros números enteros.
 """
 primos = []
-for i in range(37,61):
-    for j in range(2,11):
-        if i == j: continue
-        elif i % j == 0: continue
-        else:
-            primos.append(i)
-        print(primos)
-
-
-#for i in range(37,301):
-#    p = True
- #   for j in range(2,11):
-  #      if i == j: pass
-   #     elif i%j == 0:
-    #       p = False
-     #   else:
-      #     continue
-        #i += 1
-    #if p == True:
-     #   primos.append(i)
-#print(primos)
-
-
+for i in range(37,301):
+    n = 0
+    for j in range(1,i+1):
+        if i % j == 0: 
+            n += 1
+    if n == 2:
+        primos.append(i)
+print(primos)
 
 
 """Guardar en `fibonacci` una lista con los primeros 60 términos de la serie de 
